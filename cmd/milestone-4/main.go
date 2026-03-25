@@ -15,7 +15,7 @@ func main() {
 	ctx, cancelFunc := context.WithCancel(context.Background())
 	defer cancelFunc()
 
-	// 1. get Ollama client
+	// get Ollama client
 	client, err := api.ClientFromEnvironment()
 	if err != nil {
 		panic(err)
@@ -25,7 +25,7 @@ func main() {
 		panic(err)
 	}
 
-	// 2. preparing the image
+	// preparing the image
 	imgFile, err := os.ReadFile("/home/ossan/Projects/pdf-chatbot/imgs/booking.png")
 	if err != nil {
 		panic(err)
@@ -50,7 +50,7 @@ func main() {
 		Stream:   &falsePtr,
 	}
 
-	// 4. setup Ollama response
+	// setup Ollama response
 	chatFunc := func(resp api.ChatResponse) error {
 		fmt.Print(resp.Message.Content)
 		if resp.Done {

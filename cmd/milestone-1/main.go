@@ -32,7 +32,7 @@ func main() {
 
 	// prepare Ollama request
 	req := &api.GenerateRequest{
-		Model:  "qwen2.5vl:7b",
+		Model:  "qwen3-vl:2b",
 		Prompt: "Extract the name of the Favorite Football Team from the image.",
 		Images: []api.ImageData{imgData},
 	}

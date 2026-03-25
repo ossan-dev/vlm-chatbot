@@ -34,7 +34,7 @@ Use anedoctes, jokes, be creative, but concise.`,
 			},
 			{
 				Role:    "user",
-				Content: "Why Go is coolest programming language?",
+				Content: "Why Go is the coolest programming language?",
 			},
 		},
 		Stream: &falsePtr,
